@@ -1,0 +1,251 @@
+/* $green: #219150;
+$black: #10221b;
+$white: #fff;
+light-bg: #eee;
+$border: .2rem solid $black
+$box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+ */
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+
+*{font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    color:#10221b;
+    outline: none; /*An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".*/
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear; /* CSS transitions provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time */
+}
+
+.html{
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+section{
+    margin-top: 2rem;
+}
+
+.header{
+    position: fixed;
+    display: flex;
+
+    align-items: center;
+    top: 0;right: 0; left: 0;
+
+    background-color:#fff;
+    padding: 1rem 9%; 
+    z-index: 1000;
+}
+
+.toolbar{
+    display: flex;
+    margin-left: auto;
+    padding: 0.5rem 2%;
+    justify-content: center;
+    align-items: center;
+
+}
+.toolbar a{
+    margin: 0 0.5rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #10221b;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.toolbar a:hover, #menu-btn:hover,#search-btn:hover,#cart-btn:hover{
+    color:burlywood
+}
+
+.icon{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    color: #10221b;
+    left: 0;
+    font-size: 1.7rem;
+    text-decoration: none;
+}
+
+.icon div{
+    margin: 0 1rem;
+}
+
+.logo{
+    color: #10221b;
+    font-size: 1.7rem;
+}
+.logo i{
+    color: red;
+}
+
+#close-toolbar{
+    font-size: 2rem;
+    display: none;
+}
+
+
+
+.home-image{
+    background: url(./images/background-4.png) no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: cover;
+
+}
+.home-box{
+
+}
+
+.content{
+    top:57vh;
+    left: 7vw;
+    position: relative;
+    font-size: 5rem;
+}
+
+.content h2{
+    font-size: 4.9rem;
+    color: #0f2b1a;
+}
+.content p{
+    font-size: 1.9rem;
+    font-weight: 800;
+    line-height: 2.5;
+    color: #10221b;
+}
+
+.our-works{
+    display: flex;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#our-works-title{
+    margin: 2.5rem;
+    display: flex;
+    color: #10221b;
+    font-size: 2.5rem;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.works-container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.work{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 3rem;
+}
+
+
+.work img{
+    width: 30vh;
+    height: 30vh;
+    border-radius: 10%;
+}
+
+.work h3{
+    color: #219150;
+    line-height: 3;
+}
+
+.work p {
+    display: flex;
+    text-align: center;
+    width: 38vh;
+    height: 10vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .toolbar{
+        position:fixed;
+        top:0; left:-110%;
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30rem;
+        height: 100%;
+        background-color: #fff;
+    }
+
+    .toolbar a{
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+    }
+
+    #close-toolbar{
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        display: block;
+    }
+    .icon{
+        margin-left: auto;
+    }
+    .toolbar.active{
+        left: 0;
+        box-shadow: 0 0 0 100vw rgba(0,0,0,0.8);
+    }
+    .close-toolbar.active{
+        left: -110%;
+    }
+    #menu-btn{
+        display: inline;
+    }
+ }
+ 
+ 
+ @media only screen and (max-width: 991px) {
+    html{
+        font-size: 85%;
+    }
+
+ }
+ 
+ @media only screen and (max-width: 768px) {
+    html{
+        font-size: 75%;
+    }
+    .toolbar{
+        width: 25rem;
+    }
+ }
+ 
+ @media only screen and (max-width: 450px) {
+    html{
+        font-size: 55%;
+    }
+ }
+ 
