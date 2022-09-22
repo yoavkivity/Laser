@@ -26,16 +26,16 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 
 section{
-    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0rem;
 }
 
 .header{
     position: fixed;
     display: flex;
-
     align-items: center;
     top: 0;right: 0; left: 0;
-
     background-color:#fff;
     padding: 1rem 9%; 
     z-index: 1000;
@@ -206,31 +206,54 @@ video{
 
 
 .items-container{
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .item{
+    width: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 2rem;
 }
 .item img{
-    width: 25%;
-    height: 25%;
+    width: 25vh;
+    height: 25vh;
+
 }
 
+.btn{
+    color:#10221b;
+    background-color: #eee;
+    font-size: 1rem;
+    margin: 2rem 1rem 2rem 0rem;
+    padding: 0 2rem;
+}
 
+.btn:hover{
+    background-color: #10221b;
+    color: #eee;
+}
+.price{
+    text-align:left;
+    margin: 1rem;
+}
 
-
-
+.shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .engrave-yourself{
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
@@ -238,29 +261,74 @@ video{
     margin: 0 2rem 2rem 2rem;
 }
 
+.bottom-icons{
+    margin-right: 5rem;
+}
+
+.bottomBar {
+    background-color: #eee;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+
+}  
+.bottomBar a {
+    float: right;
+    text-align: center;
+    bottom: 5px;
+    width: 4%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 36px;
+    transition: all 0.3s ease;
+    color: white;
+    margin-right: 1rem;
+
+} 
+.bottomBarWhatapp i:hover {
+    background-color: #e9effb;
+    color: #25D366;
+}
+.bottomBarFacebook i:hover {
+    background-color: #e9effb;
+    color: #4267B2;
+}
+.bottomBarLinkedin i:hover {
+    background-color: #e9effb;
+    color: #0072b1;
+}
+.bottomBarGithub i:hover {
+    background-color: #e9effb;
+    color: #171515;
+}
+
+
 /* Drag and Drop */
 .boxStyle {
     margin-top: 1%;
     display: flex;
-    width: 100%;
-    max-width: 100%;
+    width: 80vh;
+    height: 62vh;
     display: flex;
     color:black;
     text-align: left;
     font-size: 20px;
 }
 .drag-container {
+    line-height: 2;
     margin-top: 10px;
-    max-width: 650px;
-    width: 100%;
+    width: 65vw;
+    height: 55vh;
     padding: 30px;
     background: #fff;
     border-radius: 20px;
-    box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px ;
+    box-shadow:rgba(149, 157, 165, 0.4) 0px 8px 24px ;
 
 }
 .drag-area {
-    height: 400px;
+    height: 45vh;
     border: 3px dashed #e0eafc;
     display: flex;
     align-items: center;
@@ -302,8 +370,24 @@ video{
 
 
 
+input , select {
+    width: inherit;
+    min-width: 4rem;
+    border: #10221b solid 1px;
+    margin-left: 5rem;
+}
 
+select{
+    text-align: center;
+}
 
+.submitButton{
+    width: 20rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -354,7 +438,6 @@ video{
         text-align: center;
     }
 
-
     .about-container{
         display: flex;
         flex-wrap: wrap;
@@ -368,6 +451,23 @@ video{
         width: 100%;
         height: 100%;
         margin-top: 2.5rem;
+    }
+    .engrave-yourself{
+        flex-wrap: wrap;
+    }
+    .small-container{
+        margin-top: 2rem;
+        height: inherit;
+        max-height: 35vh;
+    }
+    input , select {
+        width: inherit;
+        min-width: 4rem;
+        border: #10221b solid 1px;
+        margin-left: 4rem;
+    }
+    input, select, th{
+        font-size: 60%;
     }
  }
  
@@ -386,11 +486,11 @@ video{
     .toolbar{
         width: 25rem;
     }
- }
- 
- @media only screen and (max-width: 450px) {
-    html{
-        font-size: 55%;
+    .work p {
+        display: flex;
+        text-align: center;
+        width: 38vh;
+        height: 10vh;
     }
  }
  
